@@ -1,0 +1,167 @@
+Experiment No. 2 - Create simple web page using HTML5
+
+<html>
+<head>
+<title>
+</title>
+</head>
+<body>
+Page body This is actual content of web page
+</body >
+</html>
+
+Experiment No. 3 - Installation and Setting of LAMP
+
+* STEP 1: UPDATE 
+* Step 2: install Apache 
+* Step 3: Install MySQL 
+* Step 4: install PHP
+
+STEP 1: UPDATE
+sudo apt update 
+sudo apt upgrade
+sudo apt install apache2 apache2-utils
+
+Step 2: install Apache
+sudo apt install -y apache2 apache2-utils
+systemctl status apache2
+sudo ufw app list
+sudo ufw allow in "Apache Full"
+
+Step 3: Install MySQL
+sudo apt install mysql-server
+mysql -u root -p
+mysql>exit
+
+Step 4: install PHP
+sudo apt-get install software-properties-common
+sudo apt-get update 
+sudo apt-get install -y php7.4
+sudo apt-get install #name of the module
+sudo nano /var/www/test.php
+sudo service apache2 restart
+
+Experiment No.4 - Add Audio and Video HTML5
+<audio src="sound.mp3" controls></audio>
+or
+<audio controls>
+ <source src="songname.mp3" type="audio/mp3">
+ <source src="songname.ogg" type="audio/ogg">
+ </audio>
+
+<video src="video.mp4" controls></video>
+or
+<video controls>
+ <source src="video.mp4" type="video/mp4">
+ <source src="video.ogg" type="video/ogg">
+</video>
+Experiment No. 5 - Find the position with HTML5 Geolocation
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Get Visitor's Location Using HTML5 Geolocation</title>
+<script>
+ function showPosition() {
+ if(navigator.geolocation) {
+ navigator.geolocation.getCurrentPosition(function(position) {
+ var positionInfo = "Your current position is (" + "Latitude: " +
+position.coords.latitude + ", " + "Longitude: " + position.coords.longitude
++ ")";
+ document.getElementById("result").innerHTML =
+positionInfo;
+ });
+ } else {
+ alert("Sorry, your browser does not support HTML5
+geolocation.");
+ }
+ }
+</script>
+</head>
+<body>
+<div id="result">
+ <!--Position information will be inserted here-->
+ </div>
+ <button type="button" onclick="showPosition();">Show
+Position</button>
+</body>
+</html>
+
+Experiment No.6 -Web Page using CSS3 and HTML5
+First style.html
+<html>
+<head>
+<title> CSS example </title>
+<link rel = “stylesheet” type =“text/css” href = “exp1.css” />
+</head>
+<body>
+<h1> This is h1 heading in red color </h1>
+<p> This is first paragraph with blue color </p>
+</ body>
+</html>
+
+Experiment No. 7 -Web Form using JavaScript and HTML 5
+<html>
+<body>
+<script type=“text/javascript”>
+document.write(“Hello java script World!”);
+</script>
+</body>
+</html>
+
+Example 2
+<html>
+<head><script type=“text/javascript”>
+<!--
+function validate_form ( )
+{
+valid = true;
+if ( document.contact_form.name.value == ““ )
+{
+alert( “Please fill in the 'Your Name' box.” );
+valid = false;
+}
+if ( document.contact_form.age.value == ““ )
+{
+alert( “Please fill in the 'Your Age' box.” );
+valid = false;
+}
+if ( document.contact_form.age.value<18 )
+{
+alert( “You are not eligable for job” );
+valid = false;
+}
+if ( document.contact_form.email.value == ““ )
+{
+alert( “Please fill in the 'Your Email' box.” );
+valid = false;
+}
+if (( document.contact_form.gender[0].checked == false )
+&& ( document.contact_form.gender[1].checked == false ))
+{
+alert( “Please choose your Gender: Male or Female” );
+valid = false;
+}
+return valid;
+}
+//-->
+</script></head>
+<body><b>Registration Form</b>
+<form name=“contact_form” method=“post”
+action=“form_val.html”
+onsubmit=“return validate_form ( );”>
+<h1>Please Enter Your Name</h1>
+<p>Your Name: <input type=“text” name=“name”></p>
+<p>Your Age: <input type=“text” name=“age”></p>
+<p>Your Email: <input type=“text” name=“email”></p>
+<p>Your Gender:</p> <p>Male<input type=“radio” name=“gender”
+value=“male”></p>
+<p>Female<input type=“radio” name=“gender” value=“male”></p>
+</p>
+<p><input type=“submit” name=“send” value=“Send Details”></p>
+</fom>
+</body>
+</html>
+
+
+
